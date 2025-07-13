@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "notkirati.github.io",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NotKirati/portfolio.git"
+    "url": "git+https://github.com/NotKirati/notkirati.github.io.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NotKirati/portfolio/issues"
+    "url": "https://github.com/NotKirati/notkirati.github.io/issues"
   },
-  "homepage": "https://github.com/NotKirati/portfolio#readme",
+  "homepage": "https://github.com/NotKirati/notkirati.github.io#readme",
   "description": "",
   "dependencies": {
     "astro": "^5.11.0"
