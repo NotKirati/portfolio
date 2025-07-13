@@ -1,0 +1,122 @@
+---
+---
+<head>
+    <link rel="stylesheet" href="https://use.typekit.net/rtk8zys.css">
+</head>
+
+<div id="container">
+    <img src="" alt="" id="background" fetchpriority="high">
+    <main>
+        <section id="hero">
+            <h1>
+                Work in Progress
+            </h1>
+            <section id="links">
+                <a href="https://instagram.com/kirati.kiviniemi">
+                    Instagram <svg fill="#000000" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z"></path><path d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 
+                    1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z"></path></g></svg>
+                </a>
+                <a href="mailto:kiviniemi@kirati.dev" class="button">Contact Me</a>
+            </section>
+        </section>
+    </main>
+</div>
+
+<style>
+    #background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    #container {
+        height: 100%;
+    }
+
+    main {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+    }
+
+    #hero {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        padding: 16px;
+    }
+
+    h1 {
+        font-family: "benton-modern-display", serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 72px;
+        margin-top: 0.25em;
+    }
+
+    #links {
+        display: flex;
+        gap: 16px;
+    }
+
+    #links a {
+        
+        font-family: "benton-modern-text", serif;
+        font-weight: 400;
+        font-style: normal;
+		display: flex;
+		align-items: center;
+		padding: 10px 12px;
+		color: #111827;
+		text-decoration: none;
+		transition: color 0.2s;
+    }
+
+    #links a:hover {
+		color: rgb(78, 80, 86);
+	}
+
+    #links a svg {
+		height: 1.5em;
+		margin-left: 8px;
+	}
+
+    #links a.button {
+		color: white;
+		background: linear-gradient(83.21deg, #0f0f0f 0%, #0c0c0c 100%);
+		border-radius: 4px;
+	}
+	
+    #links a.button:hover {
+		color: rgb(230, 230, 230);
+		box-shadow: none;
+	}
+
+    @media screen and (max-width: 768px) {
+		#container {
+			display: flex;
+			flex-direction: column;
+		}
+
+		#hero {
+			display: block;
+			padding-top: 10%;
+		}
+
+		#links {
+			flex-wrap: wrap;
+		}
+
+		#links a.button {
+			padding: 14px 18px;
+		}
+
+		h1 {
+			line-height: 1.5;
+		}
+	}
+</style>

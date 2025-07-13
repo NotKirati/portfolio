@@ -3,12 +3,11 @@
 // is your "component frontmatter". It never runs in the browser.
 console.log('This runs in your terminal, not the browser!');
 import Layout from "../layouts/Layout.astro";
+import WorkInProgress from "../components/WorkInProgress.astro";
 ---
 <!-- Below is your "component template." It's just HTML, but with
     some magic sprinkled in to help you build great templates. -->
 
     <Layout>
-        <h1>Welcome to my portfolio!</h1>
-        <p>This is the home page of my Astro project.</p>
-        <p>Feel free to explore and learn more about me and my work.</p>
+        <WorkInProgress>
     </Layout>
