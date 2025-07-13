@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NotKirati/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NotKirati/portfolio/issues"
+  },
+  "homepage": "https://github.com/NotKirati/portfolio#readme",
+  "description": "",
+  "dependencies": {
+    "astro": "^5.11.0"
+  }
+}
