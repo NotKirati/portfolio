@@ -1,0 +1,60 @@
+<header>
+    <div class="center">
+        <nav id="nav">
+            <a id="logo" href="/">K</a>
+            <div class="links">
+            </div>
+        </nav>
+    </div>
+</header>
+
+<style>
+    header {
+        width: 100%;
+        padding-block: var(--space-s);
+        position: sticky;
+        background-color: var(--gray-1);
+        top: 0;
+        z-index: 10;
+    }
+
+    .center {
+        box-sizing: content-box;
+        margin-inline: auto;
+        width: calc(100% - var(--space-xl) * 2);
+        max-inline-size: 800px;
+        padding-inline: var(--space-xl);
+    }
+
+    #nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-s);
+    }
+
+    #logo {
+        font-size: 40px;
+        font-weight: bold;
+        color: #111827;
+    }
+
+    .links a {
+        display: inline-flex;
+        align-items: center;
+        background: transparent;
+        text-decoration: none;
+        line-height: 1;
+        color: var(--gray-12);
+        padding: var(--space-xs) var(--space-s);
+        border: none;
+        border-radius: var(--radius-full);
+        cursor: pointer;
+        transition: font-weight .2s ease-in-out;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .links:hover {
+            font-weight: var(--font-weight-bold);
+        }
+    }
