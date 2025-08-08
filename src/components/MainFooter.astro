@@ -19,10 +19,14 @@
                             <p>You can reach me easily by the methods below.</p>
                         </div>
                     </div>
+                    <div class="contact-sprite">
+                            <button class="button-sprite">
+                                <img class="sprite" src="src/images/main.png" alt="">
+                            </button>
+                    </div>
                 </div>
                 <div class="information">
                     <a href="mailto:kiviniemi@kirati.dev">kiviniemi@kirati.dev</a>
-                    <a href="tel:+16156636378">(615) 663-6378</a>
                 </div>
             </div>
         </div>
@@ -43,6 +47,33 @@
         padding-block: var(--space-2xl);
         width: 100%;
         border-top: 1px solid var(--gray-6);
+    }
+
+    .sprite {
+        image-rendering: pixelated;
+    }
+
+    .contact-sprite {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        user-select: none;
+        position: relative;
+        width: 272px;
+        margin-inline: -148px -2px;
+        margin-block-start: -8px;
+        flex-shrink: 0;
+    }
+
+    .button-sprite {
+        all: unset;
+        position relative;
+        width: 40%;
+        aspect-ratio: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
     }
 
     .content {
