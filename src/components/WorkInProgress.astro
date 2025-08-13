@@ -21,6 +21,7 @@
         width: calc(100% - var(--space-xl) * 2);
         max-inline-size: 800px;
         padding-inline: var(--space-xl);
+        display: flex;
     }
 
     #background {
@@ -43,6 +44,8 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+        width: 100%;
+        max-inline-size: 800px;
         gap: var(--space-3xl);
         padding-block-start: var(--space-3xl);
         padding-block-end: var(--space-3xl);
@@ -50,7 +53,7 @@
     
     h1 {
         font-weight: 800;
-        font-size: 10rem;
+        font-size: clamp(5rem, 22.8571428571vw - 1.43rem, 10rem);;
         line-height: 100%;
     }
 
