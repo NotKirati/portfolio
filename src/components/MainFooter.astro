@@ -49,13 +49,13 @@
 
     .sprite {
         image-rendering: pixelated;
-        height: 100%;
+        transform: scale(2);
     }
 
     .button-sprite {
         all: unset;
         cursor: pointer;
-        height: 100%;
+        position: absolute;
     }
 
     .div-sprite {
@@ -63,6 +63,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        height: 100%;
     }
 
     .content {
@@ -71,7 +72,7 @@
         
         border-top: 1px solid #2220347f;
         display: grid;
-        grid-template: "links1 links2 information sprite" 1fr "banner banner contact sprite" auto / .4fr .4fr auto auto;
+        grid-template: "links1 links2 information sprite" 1fr "banner banner contact sprite" auto / .2fr .2fr .4fr .2fr;
         gap: var(--space-s) var(--space-m);
     }
 
