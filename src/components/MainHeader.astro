@@ -1,8 +1,11 @@
 <header>
     <div class="center">
         <nav id="nav">
-            <a id="logo" href="/">Kirati</a>
+            <div class="home prevent-select">
+                <a id="logo" class="prevent-select" href="/">Kirati</a>
+            </div>
             <div class="links">
+                <a href="/about/" class="links">about</a>
             </div>
         </nav>
     </div>
@@ -34,18 +37,21 @@
     }
 
     #logo {
-        font-size: 72px;
+        font-size: var(--step-5);
         font-weight: 800;
-        color: #111827;
+        color: var(--gray);
+        text-decoration-color: #2220347f;
     }
 
     .links a {
+        font-size: var(--step-1);
         display: inline-flex;
         align-items: center;
         background: transparent;
         text-decoration: none;
         line-height: 1;
-        color: var(--gray-12);
+        font-weight: var(--font-weight-light);
+        color: var(--gray);
         padding: var(--space-xs) var(--space-s);
         border: none;
         border-radius: var(--radius-full);
@@ -55,6 +61,21 @@
 
     @media (hover: hover) and (pointer: fine) {
         .links:hover {
-            font-weight: var(--font-weight-bold);
+            font-weight: var(--font-weight-normal);
         }
+    }
+
+    .prevent-select {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+    }
+
+    *::-moz-selection {
+        background: var(--yellow);
+        color: var(--gray-12);
+        text-shadow: none;
     }

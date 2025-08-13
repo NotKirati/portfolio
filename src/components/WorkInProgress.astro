@@ -5,7 +5,7 @@
 </head>
 
 <main>
-    <div class="center">
+    <div class="center prevent-select">
         <section id="hero">
             <h1>
                 WORK IN<br>PROGRESS
@@ -52,5 +52,15 @@
         font-weight: 800;
         font-size: 10rem;
         line-height: 100%;
+    }
+
+    
+    .prevent-select {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
     }
 </style>

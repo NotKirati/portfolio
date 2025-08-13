@@ -68,6 +68,7 @@ import MainFooter from "../components/MainFooter.astro";
                 --radius-m: var(--space-s);
                 --radius-l: var(--space-m);
                 --radius-full: 9999px;
+                --font-weight-light: 300;
                 --font-weight-normal: 400;
                 --font-weight-bold: 800;
                 --shadow-color: 0deg 0% 0%;
@@ -75,30 +76,29 @@ import MainFooter from "../components/MainFooter.astro";
                 --shadow-m: 0px .6px .6px hsl(var(--shadow-color) / 12%), 0px 1.6px 1.6px -1.2px hsl(var(--shadow-color) / 10%), 0px 4.7px 4.6px -2.3px hsl(var(--shadow-color) / 7%), 0px 12.5px 12.2px -3.5px hsl(var(--shadow-color) / 4%);
                 --shadow-l: 0px .6px .6px hsl(var(--shadow-color) / 17%), 0px 2.6px 2.5px -.5px hsl(var(--shadow-color) / 16%), 0px 5.3px 5.2px -1px hsl(var(--shadow-color) / 15%), 0px 9.7px 9.5px -1.5px hsl(var(--shadow-color) / 13%), 0px 17px 16.6px -2px hsl(var(--shadow-color) / 12%), 0px 28.4px 27.7px -2.5px hsl(var(--shadow-color) / 11%), -.1px 45.2px 44.1px -3px hsl(var(--shadow-color) / 10%), -.1px 68.4px 66.7px -3.5px hsl(var(--shadow-color) / 8%);
 
-                --gray-1: #fcfcfc;
-                --gray-2: #f9f9f9;
-                --gray-3: #f0f0f0;
-                --gray-4: #e8e8e8;
-                --gray-5: #e0e0e0;
-                --gray-6: #d9d9d9;
-                --gray-7: #cecece;
-                --gray-8: #bbbbbb;
-                --gray-9: #8d8d8d;
-                --gray-10: #838383;
-                --gray-11: #646464;
-                --gray-12: #202020;
+                --black: #000000;
+                --gray: #222034;
+                --maroon: #45283c;
+                --dark-brown: #663931;
+                --brown: #8f563b;
+                --orange: #df7126;
+                --tan: #d9a066;
+                --pale: #eec39a;
+                --yellow: #fbf236;
+                --sky: #cbdbfc;
+                --white: #ffffff;
         }
 
         body {
-                color: var(--gray-12);
-                background-color: var(--gray-1);
+                color: var(--gray);
+                background-color: var(--white);
                 display: flex;
                 min-height: 100%;
                 position: relative;
                 flex-direction: column;
                 align-items: flex-start;
-                font-size: var(--step-0);
                 font-family: "Nikkei Maru";
+                font-size: var(--step-0);
                 font-weight: 400;
                 text-rendering: optimizelegibility;
                 font-synthesis: none;
@@ -108,6 +108,5 @@ import MainFooter from "../components/MainFooter.astro";
                 margin: 0;
                 box-sizing: border-box;
         }
-
         
 </style>

@@ -7,8 +7,10 @@
                 <a href="https://github.com/notkirati">GitHub</a>
             </div>
             <div class="banner">
-                
-                <p><span class="emoji">&#129505</span>Thanks for stopping by.</p>
+                <div class="emoji-div prevent-select">
+                    <span class="emoji">&#129505</span>
+                </div>
+                <p>Thanks for stopping by.</p>
             </div>
             <div class="contact">
                 <div class="contact-content">
@@ -20,9 +22,8 @@
                     </div>
                     
                 </div>
-                
             </div>
-            <div class="div-sprite">
+            <div class="div-sprite prevent-select">
                 <button class="button-sprite">
                     <img class="sprite" src="images/main.png" alt="">
                 </button>
@@ -30,7 +31,7 @@
             
             <div class="information">
                     <a href="mailto:kiviniemi@kirati.dev">kiviniemi@kirati.dev</a>
-                </div>
+            </div>
         </div>
 </footer>
 
@@ -43,7 +44,6 @@
     }
 
     footer {
-        font-size: var(--step--1);
         width: 100%;
     }
 
@@ -69,10 +69,10 @@
         padding-block-start: var(--space-2xl);
         padding-block-end: var(--space-2xl);
         
-        border-top: 1px solid var(--gray-6);
+        border-top: 1px solid #2220347f;
         display: grid;
-        grid-template: "links1 links2 information sprite" 1fr "banner banner contact sprite" auto / .25fr .25fr auto auto;
-        gap: var(--space-m) var(--space-xl);
+        grid-template: "links1 links2 information sprite" 1fr "banner banner contact sprite" auto / .4fr .4fr auto auto;
+        gap: var(--space-s) var(--space-m);
     }
 
     .links:first-child {
@@ -92,26 +92,28 @@
     a {
         color: unset;
         text-decoration: underline;
-        text-decoration-color: var(--gray-8);
+        text-decoration-color: #2220347f;
         text-underline-offset: max(.1em,2.5px);
         transition: text-decoration-color .2s ease-in-out,font-weight .2s ease-in-out;
     }
 
     .emoji {
-        transform: scale(2);
+        transform: scale(1.5) translateY(-.35em);
+        transform-origin: top center;
+    }
+
+    .emoji-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .banner {
         grid-area: banner;
-        color: var(--gray-11);
+        color: #222034dd;
         display: flex;
-        align-content: center;
-    }
-
-    
-
-    .banner p {
-        text-decoration: none;
+        align-items: center;
+        gap: var(--space-2xs);
     }
 
     .contact {
@@ -131,7 +133,7 @@
     }
 
     .contact-header h2 {
-        font-size: var(--step-1);
+        font-size: var(--step-2);
         font-weight: 800;
         margin: 0;
     }
@@ -143,4 +145,20 @@
 
     p {
         overflow-wrap: break-word;
+    }
+
+    .prevent-select {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+    }
+
+    *::-moz-selection {
+        background: var(--yellow);
+        color: #222034dd;
+        text-shadow: none;
+        -webkit-text-stroke-width: 1em;
     }
