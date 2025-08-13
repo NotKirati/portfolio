@@ -47,8 +47,19 @@ gray-10 = #838383;
 gray-11 = #646464;
 gray-12 = #202020;
 
+@font-face {
+        font-family: "Nikkei Maru";
+        src: url('../fonts/PPNikkeiMaru-Regular.otf') format('opentype');
+        font-weight: 400;
+}
+@font-face {
+        font-family: "Nikkei Maru";
+        src: url('../fonts/PPNikkeiMaru-Light.otf') format('opentype');
+        font-weight: 300;
+}
+
 body
-        font-family: "benton-modern-text", serif
+        font-family: "Nikkei Maru"
         color: gray-12
         background-color: gray-1
         display: flex
@@ -57,7 +68,7 @@ body
         flex-direction: column
         align-items: flex-start
         font-size: step-0
-        font-weight: font-weight-normal
+        font-weight: 400
         line-height: line-height-body
         text-rendering: optimizelegibility
         font-synthesis: none

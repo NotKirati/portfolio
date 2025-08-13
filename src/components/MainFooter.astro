@@ -1,6 +1,5 @@
 <footer>
-    <div class="center">
-        <div class="content">
+        <div class="content center">
             <div class="links">
                 <a href="https://instagram.com/kirati.kiviniemi">Instagram</a>
             </div>
@@ -8,8 +7,8 @@
                 <a href="https://github.com/notkirati">GitHub</a>
             </div>
             <div class="banner">
-                <span class="emoji">&#129505</span>
-                <p>Thanks for stopping by.</p>
+                
+                <p><span class="emoji">&#129505</span>Thanks for stopping by.</p>
             </div>
             <div class="contact">
                 <div class="contact-content">
@@ -19,18 +18,20 @@
                             <p>You can reach me easily by the methods below.</p>
                         </div>
                     </div>
-                    <div class="contact-sprite">
-                            <button class="button-sprite">
-                                <img class="sprite" src="src/images/main.png" alt="">
-                            </button>
-                    </div>
+                    
                 </div>
-                <div class="information">
+                
+            </div>
+            <div class="div-sprite">
+                <button class="button-sprite">
+                    <img class="sprite" src="src/images/main.png" alt="">
+                </button>
+            </div>
+            
+            <div class="information">
                     <a href="mailto:kiviniemi@kirati.dev">kiviniemi@kirati.dev</a>
                 </div>
-            </div>
         </div>
-    </div>
 </footer>
 
 <style>
@@ -39,46 +40,38 @@
         margin-inline: auto;
         width: calc(100% - var(--space-xl) * 2);
         max-inline-size: 800px;
-        padding-inline: var(--space-xl);
     }
 
     footer {
         font-size: var(--step--1);
-        padding-block: var(--space-2xl);
         width: 100%;
-        border-top: 1px solid var(--gray-6);
     }
 
     .sprite {
         image-rendering: pixelated;
-    }
-
-    .contact-sprite {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        user-select: none;
-        position: relative;
-        width: 272px;
-        margin-inline: -148px -2px;
-        margin-block-start: -8px;
-        flex-shrink: 0;
+        height: 100%;
     }
 
     .button-sprite {
         all: unset;
-        position relative;
-        width: 40%;
-        aspect-ratio: 1;
+        cursor: pointer;
+        height: 100%;
+    }
+
+    .div-sprite {
+        grid-area: sprite;
         display: flex;
         align-items: center;
         justify-content: center;
-        cursor: pointer;
     }
 
     .content {
+        padding-block-start: var(--space-2xl);
+        padding-block-end: var(--space-2xl);
+        
+        border-top: 1px solid var(--gray-6);
         display: grid;
-        grid-template: "links1 links2 information" 1fr "banner banner information" auto / .5fr .5fr 2fr;
+        grid-template: "links1 links2 information sprite" 1fr "banner banner contact sprite" auto / .25fr .25fr auto auto;
         gap: var(--space-m) var(--space-xl);
     }
 
@@ -104,36 +97,35 @@
         transition: text-decoration-color .2s ease-in-out,font-weight .2s ease-in-out;
     }
 
+    .emoji {
+        transform: scale(2);
+    }
+
     .banner {
         grid-area: banner;
         color: var(--gray-11);
         display: flex;
-        align-items: center;
-        gap: var(--space-s);
-        transition: background-color .2s ease-in-out;
+        align-content: center;
     }
 
-    .banner .emoji {
-        transform: scale(1.5) translateY(.04em);
-    }
+    
 
     .banner p {
         text-decoration: none;
     }
 
     .contact {
-        grid-area: information;
         display: flex;
         flex-direction: column;
-        margin-inline: auto;
         position: relative;
         max-width: 600px;
         gap: var(--space-m);
     }
 
     .contact-content {
+        grid-area: information;
         display: flex;
-        align-items: flex-start;
+        align-items: top;
         justify-content: space-between;
         flex: 1;
     }
@@ -141,13 +133,12 @@
     .contact-header h2 {
         font-size: var(--step-1);
         font-weight: var(--font-weight-bold);
-        line-height: var(--line-height-tight);
-        margin-block-end: var(--space-2xs);
+        margin: 0;
     }
 
     .information {
-        position: relative;
-        width: 100%;
+        grid-area: contact;
+        align-self: center;
     }
 
     p {

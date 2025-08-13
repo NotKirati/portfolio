@@ -23,6 +23,21 @@ import MainFooter from "../components/MainFooter.astro";
 </html>
 
 <style>
+        @font-face {
+        font-family: "Nikkei Maru";
+        src: url('../fonts/PPNikkeiMaru-Regular.otf') format('opentype');
+        font-weight: 400;
+        }
+        @font-face {
+        font-family: "Nikkei Maru";
+        src: url('../fonts/PPNikkeiMaru-Light.otf') format('opentype');
+        font-weight: 300;
+        }
+        @font-face {
+        font-family: "Nikkei Maru";
+        src: url('../fonts/PPNikkeiMaru-UltraBold.otf') format('opentype');
+        font-weight: 800;
+        }
         :root {
                 --step--1: clamp(.8889rem, .88rem + .0444vi, .9rem);
                 --step-0: clamp(1rem, .9rem + .5vi, 1.125rem);
@@ -80,7 +95,6 @@ import MainFooter from "../components/MainFooter.astro";
         }
 
         body {
-                font-family: "benton-modern-text", serif;
                 color: var(--gray-12);
                 background-color: var(--gray-1);
                 display: flex;
@@ -89,9 +103,8 @@ import MainFooter from "../components/MainFooter.astro";
                 flex-direction: column;
                 align-items: flex-start;
                 font-size: var(--step-0);
-                font-family: var(--font-sans);
-                font-weight: var(--font-weight-normal);
-                line-height: var(--line-height-body);
+                font-family: "Nikkei Maru";
+                font-weight: 400;
                 text-rendering: optimizelegibility;
                 font-synthesis: none;
         }
