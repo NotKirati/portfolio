@@ -25,17 +25,17 @@ import MainFooter from "../components/MainFooter.astro";
 <style>
         @font-face {
         font-family: "Nikkei Maru";
-        src: url('../fonts/PPNikkeiMaru-Regular.otf') format('opentype');
+        src: url('fonts/PPNikkeiMaru-Regular.otf') format('opentype');
         font-weight: 400;
         }
         @font-face {
         font-family: "Nikkei Maru";
-        src: url('../fonts/PPNikkeiMaru-Light.otf') format('opentype');
+        src: url('fonts/PPNikkeiMaru-Light.otf') format('opentype');
         font-weight: 300;
         }
         @font-face {
         font-family: "Nikkei Maru";
-        src: url('../fonts/PPNikkeiMaru-UltraBold.otf') format('opentype');
+        src: url('fonts/PPNikkeiMaru-Ultrabold.otf') format('opentype');
         font-weight: 800;
         }
         :root {
@@ -69,7 +69,7 @@ import MainFooter from "../components/MainFooter.astro";
                 --radius-l: var(--space-m);
                 --radius-full: 9999px;
                 --font-weight-normal: 400;
-                --font-weight-bold: 700;
+                --font-weight-bold: 800;
                 --shadow-color: 0deg 0% 0%;
                 --shadow-s: 0px .6px .6px hsl(var(--shadow-color) / 17%), 0px .9px .9px -1.7px hsl(var(--shadow-color) / 14%), 0px 2.5px 2.4px -3.5px hsl(var(--shadow-color) / 11%);
                 --shadow-m: 0px .6px .6px hsl(var(--shadow-color) / 12%), 0px 1.6px 1.6px -1.2px hsl(var(--shadow-color) / 10%), 0px 4.7px 4.6px -2.3px hsl(var(--shadow-color) / 7%), 0px 12.5px 12.2px -3.5px hsl(var(--shadow-color) / 4%);
@@ -88,11 +88,6 @@ import MainFooter from "../components/MainFooter.astro";
                 --gray-11: #646464;
                 --gray-12: #202020;
         }
-        
-        * {
-                margin: 0;
-                box-sizing: border-box;
-        }
 
         body {
                 color: var(--gray-12);
@@ -108,4 +103,11 @@ import MainFooter from "../components/MainFooter.astro";
                 text-rendering: optimizelegibility;
                 font-synthesis: none;
         }
+
+        * {
+                margin: 0;
+                box-sizing: border-box;
+        }
+
+        
 </style>
