@@ -6,15 +6,17 @@ import Layout from "../layouts/Layout.astro";
 <!-- Below is your "component template." It's just HTML, but with
     some magic sprinkled in to help you build great templates. -->
 <Layout>
-    <section class="title-card">
-        <h2>About Kirati</h2>
-        <h3>An Ordinary Otaku.</h3>
-        <h6><span class="emoji">&RightArrowLeftArrow;</span> Commited Aug 14, 2025 <span class="subtext">+ pushed Aug 14, 2025</span></h6>
+    <section class="text">
+        <section class="title-card">
+            <h2>About Kirati</h2>
+            <h3>An Ordinary Otaku.</h3>
+            <h6><span class="emoji">&RightArrowLeftArrow;</span> Commited Aug 14, 2025 <span class="subtext">+ pushed Aug 14, 2025</span></h6>
+        </section>
+        <section>
+            <p>
+                I've been using a computer and interacting with the internet since I was 2 years old. Through my father's dusty, old Windows Vista desktop, I was introduced to the web; That was the very beginning to my discoveries of the many hobbies I love today.
+            </p>
     </section>
-    <section>
-        <p>
-            I've been on the using a computer and interacting with the internet since I was 2 years old. Using my father's dusty, old Windows Vista desktop, I was introduced to the web; That was the very start to discovering the many hobbies I love today.
-        </p>
 </Layout>
 
 <style>
@@ -22,6 +24,14 @@ import Layout from "../layouts/Layout.astro";
         display: flex;
         flex-direction: column;
         gap: var(--space-xs);
+    }
+
+    section p {
+        text-indent: 1.3em;
+    }
+
+    .text {
+        gap: var(--space-xl)
     }
 
     .emoji {
@@ -33,8 +43,4 @@ import Layout from "../layouts/Layout.astro";
 
     .subtext {
         color: var(--light-gray);
-    }
-
-    section p {
-        text-indent: 1.3em;
     }

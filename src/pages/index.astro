@@ -17,8 +17,9 @@ import Layout from "../layouts/Layout.astro";
     <div class="showcase">
         <!-- Placeholder for a future project showcase -->
          <h2>
-            Check back later. :)
+            Come and check back later...
          </h2>
+         <h3>... there's sure to be something interesting. :)</h3>
     </div>
 </Layout>
 
@@ -52,9 +53,10 @@ import Layout from "../layouts/Layout.astro";
 
     .showcase {
         display: flex;
+        flex-direction: column;
         background-color: var(--sky);
         border-radius: var(--radius-l);
-        align-content: center;
+        align-items: center;
         justify-content: center;
         padding: var(--space-xl) var(--space-l);
     }
@@ -62,8 +64,4 @@ import Layout from "../layouts/Layout.astro";
     .showcase h2 {
         font-size: var(--step-5);
         font-family: "Unnamed Font Copy";
-    }
-
-    #hero {
-        gap: var(--space-3xl);
     }
