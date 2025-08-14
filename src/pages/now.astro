@@ -4,6 +4,7 @@
 import Layout from "../layouts/Layout.astro";
 
 const pageTitle = "Where Am I Now?";
+const allPosts = Object.values(import.meta.glob('./posts/*.md', {eager: true}))
 ---
 <!-- Below is your "component template." It's just HTML, but with
     some magic sprinkled in to help you build great templates. -->
@@ -20,7 +21,7 @@ const pageTitle = "Where Am I Now?";
                 </section>
                 <section>
                         <ul>
-                                <li><a href="/posts/hello-world">Hello World</a></li>
+                                {allPosts.map((post: any) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
                         </ul>
                 </section>
         </section>
