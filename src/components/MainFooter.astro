@@ -21,7 +21,7 @@
                     
                 </div>
             </div>
-            <div class="sprite-div prevent-select">
+            <div class="sprite-div prevent-select hide-on-mobile">
                 <button class="sprite-button">
                     <img class="sprite" src="/images/main.png" alt="">
                 </button>
@@ -103,6 +103,8 @@
     }
 
     .contact {
+        
+        grid-area: information;
         display: flex;
         flex-direction: column;
         position: relative;
@@ -111,7 +113,6 @@
     }
 
     .contact-content {
-        grid-area: information;
         display: flex;
         align-items: top;
         justify-content: space-between;
@@ -131,4 +132,21 @@
 
     p {
         overflow-wrap: break-word;
+    }
+
+    @media only screen and (max-width: 800px) {
+        .content {
+            grid-template: unset;
+            display: grid;
+            grid-template: "links1 links2" 1fr "information information" 1fr "contact contact" 1fr "banner banner" auto / .5fr .5fr;
+        }
+        .hide-on-mobile {
+            clip: rect(0 0 0 0);
+                clip-path: inset(50%);
+                height: 1px;
+                overflow: hidden;
+                position: absolute;
+                white-space: nowrap;
+                width: 1px;
+        }
     }

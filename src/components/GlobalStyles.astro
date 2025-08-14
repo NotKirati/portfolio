@@ -151,6 +151,10 @@
                 width: 1px;
         }
 
+        .hide-on-mobile {
+                display: block;
+        }
+
         .prevent-select {
                 -webkit-touch-callout: none;
                 -webkit-user-select: none;
@@ -182,9 +186,7 @@
         html {
                 /*CURSOR CHANGE*/
                 cursor: url("/images/cursor.svg") 0 0, auto;
-
                 width: 100vw;
-                height: 100vh;
         }
 
         body {
@@ -259,6 +261,18 @@
         @media (hover: hover) {
                 a:hover {
                         text-decoration-color: var(--blue);
+                }
+        }
+
+        @media only screen and (max-width: 800px) {
+                .hide-on-mobile {
+                        clip: rect(0 0 0 0);
+                        clip-path: inset(50%);
+                        height: 1px;
+                        overflow: hidden;
+                        position: absolute;
+                        white-space: nowrap;
+                        width: 1px;
                 }
         }
         
