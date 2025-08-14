@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/Layout.astro
+layout: ../../layouts/MarkdownLayout.astro
 title: 'Hello World!'
 pubDate: 2025-08-13
 description: 'This is the first post on my portfolio.'

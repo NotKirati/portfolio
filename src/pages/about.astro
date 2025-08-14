@@ -2,11 +2,26 @@
 // Welcome to Astro! Everything between these triple-dash code fences
 // is your "component frontmatter". It never runs in the browser.
 import Layout from "../layouts/Layout.astro";
+
+const pageTitle = "About Kirati";
+
+const identity = {
+    firstName: "Kirati",
+    country: "United States",
+    occupation: "Full-Stack Developer",
+    hobbies: ["Programming", "Gaming", "Anime", "Reading", "Manga", "Skateboarding"],
+};
+
+const skills = {
+    languages: ["JavaScript", "TypeScript", "Python", "Java"],
+    frameworks: ["React", "Node.js", "Astro"],
+    tools: ["Git", "Docker", "VSCode", "Figma"]
+};
 ---
 <!-- Below is your "component template." It's just HTML, but with
     some magic sprinkled in to help you build great templates. -->
-<Layout>
-    <section class="text">
+<Layout pageTitle={pageTitle}>
+    <section class="text-block">
         <section class="title-card">
             <h2>About Kirati</h2>
             <h3>An Ordinary Otaku.</h3>
@@ -16,24 +31,29 @@ import Layout from "../layouts/Layout.astro";
             <p>
                 I've been using a computer and interacting with the internet since I was 2 years old. Through my father's dusty, old Windows Vista desktop, I was introduced to the web; That was the very beginning to my discoveries of the many hobbies I love today.
             </p>
+            <p>A couple of those hobbies are {identity.hobbies[0]} and {identity.hobbies[1]}.</p>
+        </section>
+        <section>
+            <h3>Some of the Skills I've Developed Are...</h3>
+            <div class="skills">
+                <ul class="languages">
+                    <h4>Languages</h4>
+                    {skills.languages.map((skill) => <li>{skill}</li>)}
+                </ul>
+                <ul class="frameworks">
+                    <h4>Frameworks</h4>
+                    {skills.frameworks.map((skill) => <li>{skill}</li>)}
+                </ul>
+                <ul class="tools">
+                    <h4>Tools</h4>
+                    {skills.tools.map((skill) => <li>{skill}</li>)}
+                </ul>
+            </div>
+        </section>
     </section>
 </Layout>
 
 <style>
-    section {
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-xs);
-    }
-
-    section p {
-        text-indent: 1.3em;
-    }
-
-    .text {
-        gap: var(--space-xl)
-    }
-
     .emoji {
         font-family: "NeueBit";
         color: var(--sky);
@@ -43,4 +63,10 @@ import Layout from "../layouts/Layout.astro";
 
     .subtext {
         color: var(--light-gray);
+    }
+
+    .skills {
+        display: grid;
+        grid-template: "languages frameworks tools" auto / .5fr .5fr .5fr ;
+        gap: var(--space-m);
     }
