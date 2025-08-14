@@ -2,80 +2,100 @@
     <div class="center">
         <nav id="nav">
             <div class="home prevent-select">
-                <a id="logo" class="prevent-select" href="/">Kirati</a>
+                <a id="logo" class="prevent-select" href="/">
+                    <svg version="1.1" viewBox="0 0 14 20" height="40" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+                        <rect x="0" y="0" width="4" height="2" fill="#222034" />
+                        <rect x="0" y="2" width="2" height="16" fill="#222034" />
+                        <rect x="2" y="2" width="2" height="4" fill="#FFFFFF" />
+                        <rect x="4" y="2" width="2" height="2" fill="#222034" />
+                        <rect x="4" y="4" width="2" height="2" fill="#9BADB7" />
+                        <rect x="6" y="4" width="2" height="2" fill="#222034" />
+                        <rect x="2" y="6" width="2" height="10" fill="#CBDBFC" />
+                        <rect x="4" y="6" width="2" height="4" fill="#FFFFFF" />
+                        <rect x="6" y="6" width="2" height="2" fill="#9BADB7" />
+                        <rect x="8" y="6" width="2" height="2" fill="#222034" />
+                        <rect x="6" y="8" width="4" height="2" fill="#696A6A" />
+                        <rect x="10" y="8" width="2" height="2" fill="#222034" />
+                        <rect x="4" y="10" width="2" height="4" fill="#CBDBFC" />
+                        <rect x="6" y="10" width="2" height="4" fill="#9BADB7" />
+                        <rect x="8" y="10" width="4" height="2" fill="#696A6A" />
+                        <rect x="12" y="10" width="2" height="6" fill="#222034" />
+                        <rect x="8" y="12" width="4" height="2" fill="#9BADB7" />
+                        <rect x="4" y="14" width="2" height="2" fill="#9BADB7" />
+                        <rect x="6" y="14" width="4" height="2" fill="#696A6A" />
+                        <rect x="10" y="14" width="2" height="2" fill="#222034" />
+                        <rect x="2" y="16" width="2" height="2" fill="#9BADB7" />
+                        <rect x="4" y="16" width="2" height="2" fill="#696A6A" />
+                        <rect x="6" y="16" width="4" height="2" fill="#222034" />
+                        <rect x="2" y="18" width="4" height="2" fill="#222034" />
+                    </svg>
+                    <span class="hidden">Kirati Kiviniemi</span>
+                </a>
             </div>
             <div class="links">
-                <a href="/about/" class="links">about</a>
+                <a href="/projects/">projects</a>
+                <a href="/about/">about</a>
+                <a href="/now/">now</a>
             </div>
         </nav>
     </div>
 </header>
 
 <style>
+    svg {
+        display: block;
+        width: auto;
+        max-inline-size: 100%;
+    }
+
     header {
         width: 100%;
-        padding-block: var(--space-s);
         position: sticky;
-        background-color: var(--gray-1);
+        background-color: var(--white);
         top: 0;
         z-index: 10;
     }
 
-    .center {
-        box-sizing: content-box;
-        margin-inline: auto;
-        width: calc(100% - var(--space-xl) * 2);
-        max-inline-size: 800px;
-        padding-inline: var(--space-xl);
+    #logo {
+        width: auto;
+        position: absolute;
     }
 
     #nav {
         display: flex;
+        width: 100%;
         align-items: center;
         justify-content: space-between;
         gap: var(--space-s);
+        padding-block: var(--space-s);
     }
 
-    #logo {
-        font-size: var(--step-5);
-        font-weight: 800;
-        color: var(--gray);
-        text-decoration-color: #2220347f;
+    .home {
+        display: flex;
+        align-items: center;
+    }
+
+    .links {
+        display: inline-flex;
+        align-items: stretch;
+        gap: var(--space-2xs);
+        margin-inline-end: calc(-1 * var(--space-s));
     }
 
     .links a {
-        font-size: var(--step-1);
+        font-size: var(--step-2);
         display: inline-flex;
         align-items: center;
         background: transparent;
-        text-decoration: none;
         line-height: 1;
-        font-weight: var(--font-weight-light);
         color: var(--gray);
         padding: var(--space-xs) var(--space-s);
         border: none;
         border-radius: var(--radius-full);
-        cursor: pointer;
-        transition: font-weight .2s ease-in-out;
     }
 
     @media (hover: hover) and (pointer: fine) {
         .links:hover {
             font-weight: var(--font-weight-normal);
         }
-    }
-
-    .prevent-select {
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-    }
-
-    *::-moz-selection {
-        background: var(--yellow);
-        color: var(--gray-12);
-        text-shadow: none;
     }

@@ -2,10 +2,58 @@
 // Welcome to Astro! Everything between these triple-dash code fences
 // is your "component frontmatter". It never runs in the browser.
 import Layout from "../layouts/Layout.astro";
-import WorkInProgress from "../components/WorkInProgress.astro";
 ---
 <!-- Below is your "component template." It's just HTML, but with
     some magic sprinkled in to help you build great templates. -->
 <Layout>
-    <WorkInProgress title="Work in Progress" />
+    <div class="intro">
+        <p>
+            <strong><a href="/about/">Kirati Kiviniemi</a></strong> is a full-stack developer <span class="punctuation">;</span> Always creating<span class="punctuation">,</span> modifying<span class="punctuation">,</span> and improving programs for personal and commercial use. 
+        </p>
+        <p>
+            Here's a treat for showing up!
+        </p>
+    </div>
+    <div class="showcase">
+        <!-- Placeholder for a future project showcase -->
+         <h2>
+            WORK IN<br>PROGRESS
+         </h2>
+    </div>
 </Layout>
+
+<style>
+    
+
+    .intro {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-s);
+    }
+
+    .intro p, a {
+        font-size: var(--step-5);
+        line-height: var(--line-height-display);
+    }
+
+    .punctuation {
+        color: var(--sky);
+    }
+
+    strong {
+        font-weight: var(--font-weight-bold);
+        color: var(--black);
+    }
+
+    .showcase {
+        display: flex;
+        background-color: var(--sky);
+        border-radius: var(--radius-l);
+        align-content: center;
+        justify-content: center;
+        padding: var(--space-xl) var(--space-l);
+    }
+
+    .showcase h2 {
+        font-size: var(--step-9);
+    }

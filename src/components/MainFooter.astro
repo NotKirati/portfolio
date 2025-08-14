@@ -1,34 +1,31 @@
 <footer>
         <div class="content center">
             <div class="links">
-                <a href="https://instagram.com/kirati.kiviniemi">Instagram</a>
+                <span><a href="https://instagram.com/kirati.kiviniemi">Instagram</a></span>
             </div>
             <div class="links">
-                <a href="https://github.com/notkirati">GitHub</a>
+                <span><a href="https://github.com/notkirati">GitHub</a></span>
             </div>
             <div class="banner">
                 <div class="emoji-div prevent-select">
-                    <span class="emoji">&#129505</span>
+                    <span class="emoji">&heartsuit;</span>
                 </div>
                 <p>Thanks for stopping by.</p>
             </div>
             <div class="contact">
                 <div class="contact-content">
                     <div class="contact-header">
-                        <div>
                             <h2>Contact</h2>
                             <p>You can reach me easily through the methods below.</p>
-                        </div>
                     </div>
                     
                 </div>
             </div>
-            <div class="div-sprite prevent-select">
-                <button class="button-sprite">
-                    <img class="sprite" src="images/main.png" alt="">
+            <div class="sprite-div prevent-select">
+                <button class="sprite-button">
+                    <img class="sprite" src="/images/main.png" alt="">
                 </button>
             </div>
-            
             <div class="information">
                     <a href="mailto:kiviniemi@kirati.dev">kiviniemi@kirati.dev</a>
             </div>
@@ -36,12 +33,6 @@
 </footer>
 
 <style>
-    .center {
-        box-sizing: content-box;
-        margin-inline: auto;
-        width: calc(100% - var(--space-xl) * 2);
-        max-inline-size: 800px;
-    }
 
     footer {
         width: 100%;
@@ -49,20 +40,18 @@
 
     .sprite {
         image-rendering: pixelated;
-        transform: scale(2);
+        height: 166px;
     }
 
-    .button-sprite {
-        all: unset;
-        cursor: pointer;
-        position: absolute;
+    .sprite-button{
+        height: 166px;
     }
 
-    .div-sprite {
+    .sprite-div{
         grid-area: sprite;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-content: center;
+        justify-content: right;
         height: 100%;
     }
 
@@ -70,9 +59,9 @@
         padding-block-start: var(--space-2xl);
         padding-block-end: var(--space-2xl);
         
-        border-top: 1px solid #2220347f;
+        border-top: 1px solid var(--light-gray);
         display: grid;
-        grid-template: "links1 links2 information sprite" 1fr "banner banner contact sprite" auto / .2fr .2fr .4fr .2fr;
+        grid-template: "links1 links2 information sprite" 1fr "banner banner contact sprite" auto / .2fr .2fr .6fr 110px;
         gap: var(--space-s) var(--space-m);
     }
 
@@ -90,16 +79,11 @@
         display: inline-block;
     }
 
-    a {
-        color: unset;
-        text-decoration: underline;
-        text-decoration-color: #2220347f;
-        text-underline-offset: max(.1em,2.5px);
-        transition: text-decoration-color .2s ease-in-out,font-weight .2s ease-in-out;
-    }
-
     .emoji {
-        transform: scale(1.5) translateY(-.35em);
+        font-family: "NeueBit";
+        font-size: var(--step-3);
+        color: var(--sky);
+        transform: translateY(-.1em);
         transform-origin: top center;
     }
 
@@ -135,8 +119,6 @@
 
     .contact-header h2 {
         font-size: var(--step-2);
-        font-weight: 800;
-        margin: 0;
     }
 
     .information {
@@ -146,20 +128,4 @@
 
     p {
         overflow-wrap: break-word;
-    }
-
-    .prevent-select {
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-    }
-
-    *::-moz-selection {
-        background: var(--yellow);
-        color: #222034dd;
-        text-shadow: none;
-        -webkit-text-stroke-width: 1em;
     }
