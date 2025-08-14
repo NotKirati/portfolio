@@ -17,7 +17,7 @@ import Layout from "../layouts/Layout.astro";
     <div class="showcase">
         <!-- Placeholder for a future project showcase -->
          <h2>
-            WORK IN<br>PROGRESS
+            Check back later. :)
          </h2>
     </div>
 </Layout>
@@ -36,12 +36,17 @@ import Layout from "../layouts/Layout.astro";
         line-height: var(--line-height-display);
     }
 
+    .intro a {
+        font-size: var(--step-5);
+        font-family: "Unnamed Font Copy";
+
+    }
+
     .punctuation {
         color: var(--sky);
     }
 
     strong {
-        font-weight: var(--font-weight-bold);
         color: var(--black);
     }
 
@@ -55,5 +60,10 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .showcase h2 {
-        font-size: var(--step-9);
+        font-size: var(--step-5);
+        font-family: "Unnamed Font Copy";
+    }
+
+    #hero {
+        gap: var(--space-3xl);
     }

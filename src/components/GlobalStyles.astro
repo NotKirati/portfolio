@@ -123,6 +123,14 @@
                 font-weight: 800;
         }
 
+        @font-face {
+                font-family: "Unnamed Font Copy";
+                src: url('../fonts/UnnamedFontcopy.ttf') format('truetype');
+                font-weight: 400 800;
+                font-display: swap;;
+                font-style: normal;
+        }
+
         /*COMMONLY USED CLASSES*/
         .center {
                 box-sizing: content-box;
@@ -167,6 +175,15 @@
         }
 
         body {
+                /*DEFAULT FONT PROPERTIES*/
+                all: unset;
+                font-family: "Mondwest";
+                font-size: var(--step-2);
+                line-height: var(--line-height-tight);
+                letter-spacing: var(--letter-spacing-normal);
+                font-weight: var(--font-weight-normal);
+                font-synthesis: weight;
+                text-rendering: geometricPrecision;
 
                 /*DEFAULT COLORS*/
                 color: var(--gray);
@@ -179,33 +196,40 @@
                 align-items: flex-start;
         }
 
-        a {
-                all: unset;
-                text-decoration: underline;
-                text-decoration-thickness: 0.05em;
-                text-decoration-color: var(--sky);
-                cursor: url("/images/cursor-hover.svg") 7 0, pointer;
-                text-underline-offset: max(.1em,2.5px);
-                transition: text-decoration-color .2s ease-in-out, font-weight .2s ease-in-out;
-                
-        }
-
         button {
                 all: unset;
                 cursor: url("/images/cursor-hover.svg") 7 0, pointer;
         }
 
-        /*DEFAULT FONT PROPERTIES*/
-        h1, h2, h3, h4, h5, h6, a, p {
-                font-family: "Mondwest";
+        :any-link {
+                color: var(--gray);
+                text-decoration: underline;
+                text-decoration-thickness: 0.05em;
+                text-decoration-color: var(--sky);
+                cursor: url("/images/cursor-hover.svg") 7 0, pointer;
+                text-underline-offset: max(.1em,2.5px);
+                transition: text-decoration-color .2s ease-in-out
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+                font-family: "Unnamed Font Copy";
+                line-height: var(--line-height-display);
+        }
+
+        h1 {
+                font-size: var(--step-7);
+        }
+
+        h2 {
+                font-size: var(--step-5);
+        }
+
+        h3 {
+                font-size: var(--step-3);
+        }
+
+        h6 {
                 font-size: var(--step-1);
-                line-height: var(--line-height-tight);
-                letter-spacing: var(--letter-spacing-normal);
-                font-weight: var(--font-weight-normal);
-                font-synthesis: weight;
-                text-rendering: geometricPrecision;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
         }
 
         *::-moz-selection {
