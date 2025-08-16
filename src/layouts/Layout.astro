@@ -3,6 +3,8 @@ import MainHeader from "../components/MainHeader.astro";
 import MainFooter from "../components/MainFooter.astro";
 import "../components/GlobalStyles.astro";
 
+import { ClientRouter } from "astro:transitions";
+
 const { pageTitle } = Astro.props;
 ---
 <html lang="en">
@@ -17,6 +19,7 @@ const { pageTitle } = Astro.props;
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
                 <meta name="apple-mobile-web-app-title" content="Kirati" />
                 <link rel="manifest" href="/site.webmanifest" />
+                <ClientRouter />
         </head>
         <body>
                 <MainHeader />
