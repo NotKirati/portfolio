@@ -3,32 +3,7 @@
         <nav id="nav">
             <div class="home prevent-select">
                 <a id="logo" class="prevent-select" href="/">
-                    <svg version="1.1" viewBox="0 0 14 20" height="40" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
-                        <rect x="0" y="0" width="4" height="2" fill="#222034" />
-                        <rect x="0" y="2" width="2" height="16" fill="#222034" />
-                        <rect x="2" y="2" width="2" height="4" fill="#FFFFFF" />
-                        <rect x="4" y="2" width="2" height="2" fill="#222034" />
-                        <rect x="4" y="4" width="2" height="2" fill="#9BADB7" />
-                        <rect x="6" y="4" width="2" height="2" fill="#222034" />
-                        <rect x="2" y="6" width="2" height="10" fill="#CBDBFC" />
-                        <rect x="4" y="6" width="2" height="4" fill="#FFFFFF" />
-                        <rect x="6" y="6" width="2" height="2" fill="#9BADB7" />
-                        <rect x="8" y="6" width="2" height="2" fill="#222034" />
-                        <rect x="6" y="8" width="4" height="2" fill="#696A6A" />
-                        <rect x="10" y="8" width="2" height="2" fill="#222034" />
-                        <rect x="4" y="10" width="2" height="4" fill="#CBDBFC" />
-                        <rect x="6" y="10" width="2" height="4" fill="#9BADB7" />
-                        <rect x="8" y="10" width="4" height="2" fill="#696A6A" />
-                        <rect x="12" y="10" width="2" height="6" fill="#222034" />
-                        <rect x="8" y="12" width="4" height="2" fill="#9BADB7" />
-                        <rect x="4" y="14" width="2" height="2" fill="#9BADB7" />
-                        <rect x="6" y="14" width="4" height="2" fill="#696A6A" />
-                        <rect x="10" y="14" width="2" height="2" fill="#222034" />
-                        <rect x="2" y="16" width="2" height="2" fill="#9BADB7" />
-                        <rect x="4" y="16" width="2" height="2" fill="#696A6A" />
-                        <rect x="6" y="16" width="4" height="2" fill="#222034" />
-                        <rect x="2" y="18" width="4" height="2" fill="#222034" />
-                    </svg>
+                    home
                     <span class="hidden">Kirati Kiviniemi</span>
                 </a>
             </div>
@@ -57,8 +32,9 @@
     }
 
     #logo {
-        width: auto;
-        position: absolute;
+        font-family: "Unnamed Font Copy";
+        font-size: var(--step-3);
+        line-height: 1;
     }
 
     #nav {
@@ -86,18 +62,20 @@
     .links a {
         font-family: "Unnamed Font Copy";
         font-size: var(--step-3);
+        line-height: 1;
         display: inline-flex;
         align-items: center;
-        background: transparent;
-        line-height: 1;
-        color: var(--gray);
         padding: var(--space-xs) var(--space-s);
-        border: none;
-        border-radius: var(--radius-full);
     }
 
     @media (hover: hover) and (pointer: fine) {
         .links:hover {
             font-weight: var(--font-weight-normal);
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        .links a {
+            padding: var(--space-xs) var(--space-2xs);
         }
     }
