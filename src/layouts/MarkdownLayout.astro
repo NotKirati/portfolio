@@ -1,14 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const { frontmatter } = Astro.props;
 ---
 
-<Layout>
+<Layout pageTitle = {frontmatter.title}>
         <section class="text-block">
-                <slot />
+                <section>
+                        <h2>{frontmatter.title}</h2>
+                        <h3>{frontmatter.subtitle}</h3>
+                        <h4 class="creation-date">> {frontmatter.pubDate}</h4>
+                </section>
+                <section class="markdown">
+                        <slot />
+                </section>
         </section>
 </Layout>
 
-<style>
-    .text-block {
-        gap: var(--space-xs)
-    }
+<style is:global>
+
+        .markdown h3{
+                margin-top: var(--space-l);
+        }

@@ -13,11 +13,10 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', {eager: true}))
                 <section class="title-card">
                         <h2>What Is Kirati Doing Now?</h2>
                         <h3>Current Happenings.</h3>
-                        <h6>
-                                <span class="emoji">&RightArrowLeftArrow;</span> 
-                                Commited Aug 14, 2025      
+                        <h4 class="creation-date">
+                                &RightArrowLeftArrow; Commited Aug 14, 2025      
                                 <span class="subtext">+ pushed Aug 14, 2025</span>
-                        </h6>
+                        </h4>
                 </section>
                 <section>
                         <ul>
@@ -28,13 +27,6 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', {eager: true}))
 </Layout>
 
 <style>
-    .emoji {
-        font-family: "NeueBit";
-        color: var(--sky);
-        transform: translateY(-.1em);
-        transform-origin: top center;
-    }
-
-    .subtext {
-        color: var(--light-gray);
-    }
+        .subtext {
+                color: var(--light-gray);
+        }

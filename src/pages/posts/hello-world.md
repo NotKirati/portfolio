@@ -1,20 +1,11 @@
 ---
 layout: ../../layouts/MarkdownLayout.astro
 title: 'Hello World!'
-pubDate: 2025-08-13
-description: 'This is the first post on my portfolio.'
-author: 'Kirati Kiviniemi'
-image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["astro", "blogging", "learning in public"]
+subtitle: 'My First Post!'
+pubDate: '2025-08-13'
 ---
 
-## Hello World
-
-Published on: 2025-08-13
-
-Thanks for stopping by and giving this page your time. I _really_ appreciate it. Lately, I've been really trying to improve myself and my skills. This is simple just a part of that!
+Thanks for stopping by and giving this page your time. I really appreciate it. Lately, I've been really trying to improve myself and my skills. This is simple just a part of that!
 
 ### What I've Been Up To So Far
 

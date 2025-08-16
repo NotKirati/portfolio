@@ -113,23 +113,40 @@
 
         @font-face {
                 font-family: "Mondwest";
-                src: url('../fonts/PPMondwest-Regular.otf') format('opentype');
+                src: url('../fonts/PPMondwest-Regular.otf')
+                format('opentype');
                 font-weight: 400;
                 font-style: normal;
         }
 
         @font-face {
                 font-family: "NeueBit";
-                src: url('../fonts/PPNeueBit-Bold.otf') format('opentype');
+                src: url('../fonts/PPNeueBit-Bold.otf')
+                format('opentype');
                 font-weight: 800;
         }
 
         @font-face {
                 font-family: "Unnamed Font Copy";
-                src: url('../fonts/UnnamedFontcopy.ttf') format('truetype');
+                src: url('../fonts/UnnamedFontcopy.ttf')
+                format('truetype');
                 font-weight: 400 800;
-                font-display: swap;;
+                font-display: swap;
                 font-style: normal;
+        }
+
+        @font-face {
+                font-family: "Base12 Pixel Font";
+                src: url('../fonts/UnnamedPsionSeries3aSerifBitmapFontcopy.ttf')
+                format('truetype');
+                font-weight: 400;
+        }
+
+        @font-face {
+                font-family: "Extrude";
+                src: url('../fonts/Extrude.ttf')
+                format('truetype');
+                font-weight: 400;
         }
 
         /*COMMONLY USED CLASSES*/
@@ -176,6 +193,23 @@
                 gap: var(--space-s)
         }
 
+        .creation-date {
+                font-size: var(--step-0);
+        }
+
+        .creation-date::first-letter {
+                font-family: "Extrude";
+                color: var(--sky);
+                font-size: var(--step-2);
+
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none; 
+        }
+
         /*STYLE DEFAULTS*/
         * {
                 box-sizing: border-box;
@@ -211,8 +245,18 @@
                 align-items: flex-start;
         }
 
-        ul {
-                list-style: none;
+        ul, ol {
+                display: flex;
+                flex-direction: column;
+                list-style: "> ";
+                gap: var(--space-xl);
+        }
+
+        ::marker {
+                font-family: "Extrude";
+                font-size: var(--step-2);
+                color: var(--sky);
+                line-height: 0;
         }
 
         button {
@@ -231,7 +275,7 @@
         }
 
         h1, h2, h3, h4, h5, h6 {
-                font-family: "Unnamed Font Copy";
+                font-family: "Unnamed Font Copy", "Mondwest";
                 line-height: var(--line-height-display);
         }
 
@@ -247,8 +291,8 @@
                 font-size: var(--step-3);
         }
 
-        h6 {
-                font-size: var(--step-0);
+        .text-block p {
+                text-indent: var(--space-l) hanging;
         }
 
         *::-moz-selection {

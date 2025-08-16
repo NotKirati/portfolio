@@ -7,9 +7,7 @@
                 <span><a href="https://github.com/notkirati">GitHub</a></span>
             </div>
             <div class="banner">
-                <div class="emoji-div prevent-select">
-                    <span class="emoji">&heartsuit;</span>
-                </div>
+                <span class="emoji prevent-select">❤</span>
                 <p>Thanks for stopping by.</p>
             </div>
             <div class="contact">
@@ -20,11 +18,6 @@
                     </div>
                     
                 </div>
-            </div>
-            <div class="sprite-div prevent-select hide-on-mobile">
-                <button class="sprite-button">
-                    <img class="sprite" src="/images/main.png" alt="">
-                </button>
             </div>
             <div class="information">
                     <a href="mailto:kiviniemi@kirati.dev">kiviniemi@kirati.dev</a>
@@ -39,31 +32,15 @@
         font-size: var(--step-1);
     }
 
-    .sprite {
-        image-rendering: pixelated;
-        height: 166px;
-    }
-
-    .sprite-button{
-        height: 166px;
-    }
-
-    .sprite-div{
-        grid-area: sprite;
-        display: flex;
-        align-content: center;
-        justify-content: right;
-        height: 100%;
-    }
-
     .content {
-        padding-block-start: var(--space-2xl);
-        padding-block-end: var(--space-2xl);
+        padding-block-start: var(--space-m);
+        padding-block-end: var(--space-m);
         
         border-top: 1px solid var(--light-gray);
         display: grid;
-        grid-template: "links1 links2 information sprite" 1fr "banner banner contact sprite" auto / .2fr .2fr .6fr 110px;
+        grid-template: "links1 links2 information" 1fr "banner banner contact" auto / .2fr .2fr .6fr;
         gap: var(--space-s) var(--space-m);
+        align-items: baseline;
     }
 
     .links:first-child {
@@ -76,22 +53,10 @@
         gap: var(--space-2xs);
     }
 
-    .links a {
-        display: inline-block;
-    }
-
     .emoji {
-        font-family: "NeueBit";
-        font-size: var(--step-3);
+        font-family: "Base12 Pixel Font";
+        font-size: var(--step-2);
         color: var(--sky);
-        transform: translateY(-.1em);
-        transform-origin: top center;
-    }
-
-    .emoji-div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     .banner {
@@ -103,7 +68,6 @@
     }
 
     .contact {
-        
         grid-area: information;
         display: flex;
         flex-direction: column;
@@ -127,10 +91,6 @@
     .information {
         grid-area: contact;
         align-self: center;
-    }
-
-    p {
-        overflow-wrap: break-word;
     }
 
     @media only screen and (max-width: 800px) {
