@@ -2,6 +2,7 @@
 // Welcome to Astro! Everything between these triple-dash code fences
 // is your "component frontmatter". It never runs in the browser.
 import Layout from "../layouts/Layout.astro";
+import Banner from "../components/BannerIsland.astro"
 
 const pageTitle = "Kirati Kiviniemi";
 ---
@@ -26,8 +27,6 @@ const pageTitle = "Kirati Kiviniemi";
 </Layout>
 
 <style>
-    
-
     .intro {
         display: flex;
         flex-direction: column;
@@ -41,6 +40,8 @@ const pageTitle = "Kirati Kiviniemi";
         font-family: "Unnamed Font Copy";
 
     }
+
+    .intro::content
 
     strong {
         color: var(--black);

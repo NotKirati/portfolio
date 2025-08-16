@@ -4,10 +4,11 @@ import MainFooter from "../components/MainFooter.astro";
 import "../components/GlobalStyles.astro";
 
 import { ClientRouter } from "astro:transitions";
+import { slide } from "astro:transitions"
 
 const { pageTitle } = Astro.props;
 ---
-<html lang="en">
+<html lang="en" transition:animate="none">
         <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width", initial-scale=1 />
@@ -25,7 +26,8 @@ const { pageTitle } = Astro.props;
                 <MainHeader />
                 <main>
                         <div class="center">
-                                <section id="hero">
+                                <section id="hero"
+                                transition:animate={slide({ duration: "0.4s"})}>
                                         <h1 class="hidden">Kirati creates, modifies, and improves.</h1>
                                         <slot />
                                 </section>
