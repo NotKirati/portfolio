@@ -172,6 +172,10 @@
                 display: block;
         }
 
+        .hide-on-desktop {
+                display: block;
+        }
+
         .prevent-select {
                 -webkit-touch-callout: none;
                 -webkit-user-select: none;
@@ -295,6 +299,28 @@
                 text-indent: var(--space-l) hanging;
         }
 
+        .subtext {
+                color: var(--light-gray);
+        }
+
+        .punctuation {
+                color: var(--sky);
+        }
+
+        .emoji {
+                font-family: "Base12 Pixel Font";
+                font-size: var(--step-2);
+                color: var(--sky);
+        }
+
+        .symbol {
+                font-family: "Extrude";
+                font-size: var(--step-2);
+                color: var(--sky);
+                line-height: 1;
+                text-decoration: none;
+        }
+
         *::-moz-selection {
                 background: var(--highlight);
                 color: #222034dd;
@@ -317,6 +343,26 @@
                         position: absolute;
                         white-space: nowrap;
                         width: 1px;
+                }
+
+                .hide-on-desktop {
+                        display: block;
+                }
+        }
+
+        @media only screen and (min-width: 800px) {
+                .hide-on-desktop {
+                        clip: rect(0 0 0 0);
+                        clip-path: inset(50%);
+                        height: 1px;
+                        overflow: hidden;
+                        position: absolute;
+                        white-space: nowrap;
+                        width: 1px;
+                }
+
+                .hide-on-mobile {
+                        display: block;
                 }
         }
         

@@ -6,15 +6,28 @@
                     home
                     <span class="hidden">Kirati Kiviniemi</span>
                 </a>
+                <a href="javascript:void(0);" class="symbol hide-on-desktop" onclick="toggleLinks()">=</a>
             </div>
-            <div class="links">
+            <div id="links">
                 <a href="/projects/">projects</a>
                 <a href="/about/">about</a>
                 <a href="/now/">now</a>
             </div>
+            
         </nav>
     </div>
 </header>
+
+<script is:inline>
+    function toggleLinks() {
+        var links = document.getElementById("links");
+        if (links.style.display === "flex") {
+            links.style.display = "none";
+        } else {
+            links.style.display = "flex";
+        }
+    };
+</script>
 
 <style>
     svg {
@@ -31,51 +44,47 @@
         z-index: 10;
     }
 
-    #logo {
-        font-family: "Unnamed Font Copy", "Mondwest";
-        font-size: var(--step-3);
-        line-height: 1;
-    }
-
     #nav {
+        font-family: "Unnamed Font Copy", "Mondwest";
         display: flex;
         width: 100%;
-        align-items: center;
         justify-content: space-between;
-        gap: var(--space-s);
         padding-block: var(--space-s);
+        font-size: var(--step-3);
+        line-height: 1;
     }
 
     .home{
         display: flex;
-        align-items: center;
-        margin-inline-end: var(--space-l);
+        justify-content: space-between;
     }
 
-    .links {
-        display: inline-flex;
-        align-items: stretch;
-        gap: var(--space-2xs);
-        margin-inline-end: calc(-1 * var(--space-s));
+    #links {
+        display: flex;
+        gap: var(--space-l);
     }
 
-    .links a {
-        font-family: "Unnamed Font Copy", "Mondwest";
-        font-size: var(--step-3);
-        line-height: 1;
-        display: inline-flex;
-        align-items: center;
-        padding: var(--space-xs) var(--space-s);
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-        .links:hover {
-            font-weight: var(--font-weight-normal);
-        }
+    .symbol{
+        font-size: var(--step-4);
     }
 
     @media only screen and (max-width: 800px) {
-        .links a {
-            padding: var(--space-xs) var(--space-2xs);
+        #nav {
+            flex-direction: column
+        }
+
+        #links {
+            display: none;
+            flex-direction: column;
+            gap: var(--space-m);
         }
     }
+
+    @media only screen and (min-width: 800px) {
+        #links {
+            display: flex;
+        }
+    }
+</style>
+
+
