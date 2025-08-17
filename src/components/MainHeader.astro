@@ -1,8 +1,8 @@
 <header transition:name = "Main Header" transition:persist>
     <div class="center">
-        <nav id="nav">
-            <div class="home prevent-select">
-                <a id="logo" class="prevent-select" href="/">
+        <nav id="nav" class="prevent-select">
+            <div class="home">
+                <a id="logo" href="/">
                     home
                     <span class="hidden">Kirati Kiviniemi</span>
                 </a>
@@ -62,6 +62,7 @@
     #links {
         display: flex;
         gap: var(--space-l);
+        width: fit-content;
     }
 
     .symbol{
