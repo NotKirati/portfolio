@@ -20,7 +20,8 @@
   "homepage": "https://github.com/NotKirati/notkirati.github.io#readme",
   "description": "",
   "dependencies": {
-    "astro": "^5.11.0"
+    "astro": "^5.11.0",
+    "sass": "^1.90.0"
   },
   "devDependencies": {
     "wrangler": "^4.28.1"

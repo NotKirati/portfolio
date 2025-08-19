@@ -1,14 +1,14 @@
-<header transition:name = "Main Header" transition:persist>
+<header class="typography typography--header" transition:name = "Main Header" transition:persist>
     <div class="center">
-        <nav id="nav" class="prevent-select">
-            <div class="home">
-                <a id="logo" href="/">
+        <nav class="menu" class="prevent-select">
+            <div class="menu menu__home">
+                <a id="" href="/">
                     home
                     <span class="hidden">Kirati Kiviniemi</span>
                 </a>
-                <a href="javascript:void(0);" class="symbol hide-on-desktop" onclick="toggleLinks()">=</a>
+                <a href="javascript:void(0);" class="menu menu__button symbol hide-on-desktop" onclick="toggleMenuLinks()">=</a>
             </div>
-            <div id="links">
+            <div class="menu menu__links">
                 <a href="/projects/">projects</a>
                 <a href="/about/">about</a>
                 <a href="/now/">now</a>
@@ -19,70 +19,72 @@
 </header>
 
 <script is:inline>
-    function toggleLinks() {
-        var links = document.getElementById("links");
-        if (links.style.display === "flex") {
-            links.style.display = "none";
+    function toggleMenuLinks() {
+        var menu__links = document.getElementsByClassName("menu__links");
+        if (menu__links[0].style.display === "flex") {
+            menu__links[0].style.display = "none";
         } else {
-            links.style.display = "flex";
+            menu__links[0].style.display = "flex";
         }
     };
 </script>
 
-<style>
-    svg {
-        display: block;
-        width: auto;
-        max-inline-size: 100%;
-    }
+<style lang="scss">
 
     header {
-        width: 100vw;
+        width: 100%;
         position: sticky;
         background-color: var(--white);
         top: 0;
         z-index: 10;
+    };
+
+    .typography--header {
+        a {
+            font-family: 'Unnamed Font Copy', 'Mondwest';
+        }
     }
 
-    #nav {
-        font-family: "Unnamed Font Copy", "Mondwest";
+    .menu {
         display: flex;
         width: 100%;
         justify-content: space-between;
         padding-block: var(--space-s);
+
+        /* Font Override */
         font-size: var(--step-3);
         line-height: 1;
-    }
 
-    .home{
-        display: flex;
-        justify-content: space-between;
-    }
+        &__home {
+            display: flex;
+            justify-content: space-between;
+        };
 
-    #links {
-        display: flex;
-        gap: var(--space-l);
-        width: fit-content;
-    }
+        &__links {
+            display: flex;
+            gap: var(--space-l);
+            width: fit-content;
+        };
 
-    .symbol{
-        font-size: var(--step-4);
+        &__button {
+            font-size: var(--step-4);
+        };
     }
 
     @media only screen and (max-width: 800px) {
-        #nav {
-            flex-direction: column
-        }
-
-        #links {
-            display: none;
+        .menu {
             flex-direction: column;
-            gap: var(--space-m);
+
+            &__links {
+                display: none;
+                flex-direction: column;
+                gap: var(--space-m);
+            }
         }
     }
 
     @media only screen and (min-width: 800px) {
-        #links {
+        .menu__links {
             display: flex;
         }
     }

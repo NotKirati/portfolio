@@ -11,7 +11,7 @@ const { pageTitle } = Astro.props;
 <html lang="en" transition:animate="none">
         <head>
                 <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width", initial-scale=1 />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <title>{pageTitle}</title>
 
                 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -26,7 +26,7 @@ const { pageTitle } = Astro.props;
                 <MainHeader />
                 <main>
                         <div class="center">
-                                <section id="hero"
+                                <section class="hero"
                                 transition:animate={slide({ duration: "0.4s"})}>
                                         <h1 class="hidden">Kirati creates, modifies, and improves.</h1>
                                         <slot />
@@ -37,18 +37,22 @@ const { pageTitle } = Astro.props;
         </body>
 </html>
 
-<style>
+<style lang="scss">
         main {
-                flex: 1;
+                flex: auto;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
+
+                > div {
+                        flex:auto;
+                }
         }
 
-        #hero {
+        .hero {
                 display: flex;
                 flex-direction: column;
-                width: 100%;
+                flex: auto;
                 max-inline-size: 800px;
                 padding-block-start: var(--space-2xl);
                 padding-block-end: var(--space-2xl);

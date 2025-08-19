@@ -1,57 +1,78 @@
-<footer transition:name = "Main Footer" transition:persist>
-        <div class="content center">
-            <div class="links">
-                <span><a href="https://instagram.com/kjkiviniemi">Instagram</a></span>
-            </div>
-            <div class="links">
-                <span><a href="https://github.com/notkirati">GitHub</a></span>
-            </div>
-            <div class="banner">
-                <span class="emoji prevent-select">❤</span>
-                <p>Thanks for stopping by.</p>
-            </div>
-            <div class="contact">
-                <div class="contact-content">
-                    <div class="contact-header">
-                            <h2>Contact</h2>
-                            <p>You can reach me easily through the methods below.</p>
-                    </div>
-                    
+<footer class="typography" transition:name = "Main Footer" transition:persist>
+        <div class="center">
+            <div class="footer">
+                <div class="links typography--footer">
+                    <span><a href="https://instagram.com/kjkiviniemi">Instagram</a></span>
                 </div>
-            </div>
-            <div class="information">
-                    <a href="mailto:kiviniemi@kirati.dev">kiviniemi@kirati.dev</a>
+                <div class="links typography--footer">
+                    <span><a href="https://github.com/notkirati">GitHub</a></span>
+                </div>
+                <div class="banner typography--footer">
+                    <span class="emoji prevent-select">❤</span>
+                    <p>Thanks for stopping by.</p>
+                </div>
+                <div class="contact-card contact-card--layout typography--contact-card">
+                    <div class="contact-card contact-card__header">
+                            <h2>Contact</h2>
+                            <p>If you're interested in what I do, please feel free to reach out at the email provided below.</p>
+                        
+                    </div>
+                    <div class="contact-card contact-card__email">
+                            <a href="/about/">contact@kirati.dev</a>
+                    </div>
+                </div>
             </div>
         </div>
 </footer>
 
-<style>
+<style lang="scss">
+
+    .typography{
+        &--footer {
+            a, p {
+                font-family: "Mondwest";
+                font-size: var(--step-1);
+            };
+        };
+
+        &--contact-card {
+            a, p {
+                font-family: "Mondwest";
+                font-size: var(--step-1);
+            };
+
+            h2 {
+                font-family: "Unnamed Font Copy";
+                font-size: var(--step-3);
+            };
+        };
+    };
 
     footer {
         width: 100%;
-        font-size: var(--step-1);
-    }
+    };
 
-    .content {
-        padding-block-start: var(--space-m);
-        padding-block-end: var(--space-m);
+    .footer {
+        flex:auto;
+        padding-block-start: var(--space-2xl);
+        padding-block-end: var(--space-2xl);
         
         border-top: 1px solid var(--light-gray);
         display: grid;
-        grid-template: "links1 links2 information" 1fr "banner banner contact" auto / .2fr .2fr .6fr;
+        grid-template: "links1 links2 contact-card" 1fr "banner banner contact-card" auto / .2fr .2fr .6fr;
         gap: var(--space-s) var(--space-m);
         align-items: baseline;
-    }
-
-    .links:first-child {
-        grid-area: links1;
     }
 
     .links {
         display: flex;
         flex-flow: column wrap;
         gap: var(--space-2xs);
-    }
+
+        &:first-child {
+            grid-area: links1;
+        };
+    };
 
     .banner {
         grid-area: banner;
@@ -61,36 +82,32 @@
         gap: var(--space-2xs);
     }
 
-    .contact {
-        grid-area: information;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        max-width: 600px;
-        gap: var(--space-m);
-    }
+    .contact-card {
+        &--layout {  
+            grid-area: contact-card;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: var(--space-2xl)
+        };
 
-    .contact-content {
-        display: flex;
-        justify-content: space-between;
-        flex: 1;
-    }
+        &__header {
+            display: flex;
+            flex-direction: column;
+        }
 
-    .contact-header h2 {
-        font-size: var(--step-3);
-        font-family: "Unnamed Font Copy";
-        contain: paint;
-    }
-
-    .information {
-        grid-area: contact;
-        align-self: center;
-    }
+        &__email {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-m);
+        };
+    };
 
     @media only screen and (max-width: 800px) {
-        .content {
+        .footer {
             grid-template: unset;
             display: grid;
-            grid-template: "links1 links2" 1fr "information information" 1fr "contact contact" 1fr "banner banner" auto / .5fr .5fr;
+            grid-template: "links1 links2" auto "contact-card contact-card" auto "banner banner" auto / .5fr .5fr;
+            gap: var(--space-xl) var(--space-m);
         }
     }

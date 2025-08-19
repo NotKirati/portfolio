@@ -1,6 +1,6 @@
 ---
 ---
-<style is:global>
+<style lang="scss" is:global>
         /*Default values and custom variables to be used throughout the site*/
         :root {
                 /*TEXT SIZES*/
@@ -68,7 +68,7 @@
                 --light-blue: #5fcde4;
 
                 --highlight: #fbf2367f;
-        }
+        };
 
         /*FONTS*/
         @font-face {
@@ -151,7 +151,6 @@
 
         /*COMMONLY USED CLASSES*/
         .center {
-                box-sizing: content-box;
                 margin-inline: auto;
                 width: calc(100% - var(--space-xl) * 2);
                 max-inline-size: 800px;
@@ -224,29 +223,20 @@
         html {
                 /*CURSOR CHANGE*/
                 cursor: url("/images/cursor.svg") 0 0, auto;
-                height: 100vh;
+                height: 100%;
+                overflow: hidden;
         }
 
         body {
-                /*DEFAULT FONT PROPERTIES*/
-                all: unset;
-                font-family: "Mondwest";
-                font-size: var(--step-2);
-                line-height: var(--line-height-tight);
-                letter-spacing: var(--letter-spacing-normal);
-                font-weight: var(--font-weight-normal);
-                font-synthesis: weight;
-                text-rendering: geometricPrecision;
+                height: 100%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
 
                 /*DEFAULT COLORS*/
                 color: var(--gray);
                 background-color: var(--white);
-
-                display: flex;
-                min-height: 100%;
-                position: relative;
-                flex-direction: column;
-                align-items: flex-start;
         }
 
         ul, ol {
@@ -278,22 +268,44 @@
                 transition: text-decoration-color .2s ease-in-out
         }
 
-        h1, h2, h3, h4, h5, h6 {
-                font-family: "Unnamed Font Copy", "Mondwest";
-                line-height: var(--line-height-display);
-        }
+        .typography {
 
-        h1 {
-                font-size: var(--step-7);
-        }
+                font-synthesis: weight;
+                text-rendering: geometricPrecision;
 
-        h2 {
-                font-size: var(--step-5);
-        }
+                $font--header: "Unnamed Font Copy";
+                $font--body: "Mondwest";
 
-        h3 {
-                font-size: var(--step-3);
-        }
+                &--main {
+                        p, a, ul, ol {
+                                /*DEFAULT FONT PROPERTIES*/
+                                font-family: $font--body;
+                                font-size: var(--step-2);
+                                line-height: var(--line-height-tight);
+                                letter-spacing: var(--letter-spacing-normal);
+                                font-weight: var(--font-weight-normal);
+                        };
+
+                        h1, h2, h3, h4, h5, h6 {
+                                font-family: $font--header;
+                                line-height: var(--line-height-display);
+                        };
+
+                        h1 {
+                                font-size: var(--step-7);
+                        };
+
+                        h2 {
+                                font-size: var(--step-5);
+                        };
+
+                        h3 {
+                                font-size: var(--step-3);
+                        };
+                }
+        };
+
+        
 
         .text-block p {
                 text-indent: var(--space-l) hanging;
