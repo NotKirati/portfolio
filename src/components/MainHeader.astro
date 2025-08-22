@@ -1,8 +1,8 @@
 <header class="typography typography--header" transition:name = "Main Header" transition:persist>
     <div class="center">
-        <nav class="menu" class="prevent-select">
+        <nav class="menu menu--layout" class="prevent-select">
             <div class="menu menu__home">
-                <a id="" href="/">
+                <a class="menu" href="/">
                     home
                     <span class="hidden">Kirati Kiviniemi</span>
                 </a>
@@ -47,13 +47,16 @@
 
     .menu {
         display: flex;
-        width: 100%;
         justify-content: space-between;
-        padding-block: var(--space-s);
 
         /* Font Override */
         font-size: var(--step-3);
         line-height: 1;
+
+        &--layout {
+            width: 100%;
+            padding-block: var(--space-s);
+        };
 
         &__home {
             display: flex;
@@ -64,6 +67,7 @@
             display: flex;
             gap: var(--space-l);
             width: fit-content;
+            transition: display 2s ease-in-out;
         };
 
         &__button {
@@ -73,7 +77,9 @@
 
     @media only screen and (max-width: 800px) {
         .menu {
-            flex-direction: column;
+            &--layout {
+                flex-direction: column;
+            }
 
             &__links {
                 display: none;

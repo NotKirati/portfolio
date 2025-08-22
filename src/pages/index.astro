@@ -1,17 +1,21 @@
 ---
-// Welcome to Astro! Everything between these triple-dash code fences
-// is your "component frontmatter". It never runs in the browser.
 import Layout from "../layouts/Layout.astro";
 import Banner from "../components/BannerIsland.astro"
+import OnClick from "../components/OnClickElement.astro"
 
 const pageTitle = "Kirati Kiviniemi";
+
 ---
-<!-- Below is your "component template." It's just HTML, but with
-    some magic sprinkled in to help you build great templates. -->
+
 <Layout pageTitle={pageTitle}>
-    <div class="intro typography typography--intro">
-        <p>
-            <strong><a href="/about/">Kirati Kiviniemi</a></strong> is a full-stack developer <span class="punctuation">;</span> Always creating<span class="punctuation">,</span> modifying<span class="punctuation">,</span> and improving software.
+    <div class="intro--layout typography typography--intro">
+        <p class="intro__thesis">
+            <strong><a href="/about/">Kirati Kiviniemi</a></strong> is a full-stack developer <span class="punctuation">;</span>
+            
+            Always building software with
+            <a href="javascript:void(0)">modularity</a><span class="punctuation">,</span>
+            <a href="javascript:void(0)">efficiency</a><span class="punctuation">,</span> and
+            <a href="javascript:void(0)">readability</a> in mind.
         </p>
         <p>
             Here's a treat for showing up!
@@ -31,16 +35,13 @@ const pageTitle = "Kirati Kiviniemi";
             font-size: var(--step-5);
             line-height: var(--line-height-display);
 
-            a {
-                font-family: "Unnamed Font Copy";
-            };
-
             p {
                 font-family: "Mondwest";
             };
 
             strong {
                 color: var(--black);
+                font-family: "Unnamed Font Copy";
             };
         };
         
@@ -53,9 +54,15 @@ const pageTitle = "Kirati Kiviniemi";
     };
 
     .intro {
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-s);
+        &--layout {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-s);
+        };
+
+        &__thesis {
+
+        };
     };
     
 

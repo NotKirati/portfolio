@@ -1,0 +1,9 @@
+---
+
+const {text, targetFunction} = Astro.props;
+
+---
+
+<!-- Custom HTML element to create a clickable link within text blocks -->
+
+<a href="javascript:void(0)" onclick="{ targetFunction }">{ text }</a>
