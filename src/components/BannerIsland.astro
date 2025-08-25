@@ -1,17 +1,18 @@
 ---
 ---
 <canvas id="sprite-banner" style="image-rendering: pixelated">
-        <div class="hidden">
-                <img id="avatar-sprite" src="/images/main.png" fetchpriority="low" alt="">
-        </div>
+    <div class="hidden">
+        <img id="avatar-sprite" src="/images/main.png" fetchpriority="low" alt="">
+    </div>
 </canvas>
 
 <script>
-        var banner = document.getElementById("sprite-banner") as HTMLCanvasElement;
-        var context = banner.getContext("2d");
+    var banner = document.getElementById("sprite-banner") as HTMLCanvasElement;
+    var context = banner.getContext("2d");
 
-        var avatar = document.getElementById("avatar-sprite") as HTMLImageElement;
+    var avatar = document.getElementById("avatar-sprite") as HTMLImageElement;
 
-        avatar.addEventListener("load", (e) => {
-                context.drawImage(avatar, 0, 0, 55, 83, 0, 0, 55, 83)
-        });
+    avatar.addEventListener("load", (e) => {
+        context.drawImage(avatar, 0, 0, 55, 83, 0, 0, 55, 83)
+    });
+</script>

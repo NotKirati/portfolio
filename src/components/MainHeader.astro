@@ -1,6 +1,6 @@
 <header class="typography typography--header" transition:name = "Main Header" transition:persist>
     <div class="center">
-        <nav class="menu menu--layout" class="prevent-select">
+        <nav class="menu menu--layout prevent-select">
             <div class="menu menu__home">
                 <a class="menu" href="/">
                     home
@@ -20,7 +20,7 @@
 
 <script is:inline>
     function toggleMenuLinks() {
-        var menu__links = document.getElementsByClassName("menu__links");
+        const menu__links = document.getElementsByClassName("menu__links");
         if (menu__links[0].style.display === "flex") {
             menu__links[0].style.display = "none";
         } else {

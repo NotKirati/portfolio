@@ -5,20 +5,20 @@ const { frontmatter } = Astro.props;
 ---
 
 <Layout pageTitle = {frontmatter.title}>
-        <section class="text-block typography--main">
-                <section>
-                        <h2>{frontmatter.title}</h2>
-                        <h3>{frontmatter.subtitle}</h3>
-                        <h4 class="creation-date">> {frontmatter.pubDate}</h4>
-                </section>
-                <section class="markdown">
-                        <slot />
-                </section>
+    <section class="text-block typography--main">
+        <section>
+            <h2>{frontmatter.title}</h2>
+            <h3>{frontmatter.subtitle}</h3>
+            <h4 class="creation-date">> {frontmatter.pubDate}</h4>
         </section>
+        <section class="markdown">
+            <slot />
+        </section>
+    </section>
 </Layout>
 
 <style lang="scss" is:global>
-
-        .markdown h3{
-                margin-top: var(--space-l);
-        }
+    .markdown h3{
+        margin-top: var(--space-l);
+    }
+</style>

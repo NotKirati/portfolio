@@ -9,55 +9,54 @@ import { slide } from "astro:transitions"
 const { pageTitle } = Astro.props;
 ---
 <html lang="en" transition:animate="none">
-        <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <title>{pageTitle}</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{pageTitle}</title>
 
-                <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-                <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-                <link rel="shortcut icon" href="/favicon.ico" />
-                <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-                <meta name="apple-mobile-web-app-title" content="Kirati" />
-                <link rel="manifest" href="/site.webmanifest" />
-                <ClientRouter />
-        </head>
-        <body>
-                <MainHeader />
-                <main>
-                        <div class="center">
-                                <section class="hero"
-                                transition:animate={slide({ duration: "0.4s"})}>
-                                        <h1 class="hidden">Kirati creates, modifies, and improves.</h1>
-                                        <slot />
-                                </section>
-                        </div>
-                </main>
-                <MainFooter />
-        </body>
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="Kirati" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <ClientRouter />
+    </head>
+    <body>
+        <MainHeader />
+        <main>
+            <div class="center">
+                <section class="hero"
+                transition:animate={slide({ duration: "0.4s"})}>
+                    <h1 class="hidden">Kirati creates, modifies, and improves.</h1>
+                    <slot />
+                </section>
+            </div>
+        </main>
+        <MainFooter />
+    </body>
 </html>
 
 <style lang="scss">
-        main {
-                flex: auto;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
+    main {
+        flex: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
 
-                > div {
-                        flex:auto;
-                }
+        > div {
+            flex:auto;
         }
+    }
 
-        .hero {
-                display: flex;
-                flex-direction: column;
-                flex: auto;
-                max-inline-size: 800px;
-                padding-block-start: var(--space-2xl);
-                padding-block-end: var(--space-2xl);
-                
-                gap: var(--space-3xl);
-        }
+    .hero {
+        display: flex;
+        flex-direction: column;
+        flex: auto;
+        max-inline-size: 800px;
+        padding-block-start: var(--space-2xl);
+        padding-block-end: var(--space-2xl);
         
+        gap: var(--space-3xl);
+    }
 </style>
